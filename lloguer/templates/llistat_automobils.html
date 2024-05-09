@@ -1,0 +1,9 @@
+<!-- A lloguer/templates/llistat_automobils.html -->
+<h1>Llistat d'Automòbils</h1>
+<ul>
+{% for automobil in automobils %}
+    <li>{{ automobil.marca }} {{ automobil.model }} - {{ automobil.matricula }}</li>
+{% empty %}
+    <li>No hi ha automòbils disponibles.</li>
+{% endfor %}
+</ul>
